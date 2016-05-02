@@ -1,0 +1,22 @@
+{
+  "name": "zotovic",
+  "description": "zotovic website",
+  "main": "index.html",
+  "authors": [
+    "Zoran Zlokapa"
+  ],
+  "license": "ISC",
+  "homepage": "http://zotovicbl.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.3",
+    "uikit": "^2.26.2"
+  }
+}

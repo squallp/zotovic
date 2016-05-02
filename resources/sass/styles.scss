@@ -1,0 +1,207 @@
+/**
+ * @name Zotovic styles collection
+ * @author Zoran Zlokapa
+ */
+
+/********************************************************************************
+ = 0. Table of Content
+   1. Global variables
+   2. HTML setup
+   3. Typography
+   4. Plugin modifications
+   5. Helper classes
+   6. Modules
+   7. Layout
+ ********************************************************************************/
+
+@import
+    "../components/uikit/scss/uikit-mixins.scss",
+    "../components/uikit/scss/uikit.scss"
+;
+
+
+/*
+ * =1. Global variables
+ */
+
+$color-white:   #ffffff;
+$color-primary: #1E628E;
+$color-danger:  #EB1C24;
+
+$color-primary-semi-transparent: transparentize($color-primary, .25);
+
+
+/*
+* 4. Plugin modifications
+*/
+
+.uk-panel-box-primary {
+    color: $color-white;
+    background-color: $color-primary;
+
+    .uk-panel-title {
+        color: $color-white;
+    }
+}
+
+
+/*
+ * =5. Helpers
+ */
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-danger {
+    color: $color-danger;
+}
+
+.media {
+    > .media-object {
+        margin-right: 1rem;
+    }
+}
+
+
+/*
+ * Zotovic icons
+ */
+
+.zi--xs {
+    font-size: .75em;
+}
+
+/*
+ * =Site navbar
+ */
+
+.uk-navbar {
+    background: transparent;
+}
+
+.uk-navbar-nav {
+    > li {
+        > a {
+            color: $color-primary;
+        }
+    }
+}
+
+.uk-navbar-brand {
+    height: 4rem;
+
+    img {
+        height: 4rem;
+    }
+}
+
+
+/*
+ * =Main hero section
+ */
+
+.main-hero__pitch {
+    position: absolute;
+    top: 20rem;
+    right: 0;
+    left: 50%;
+    padding: 1em;
+    color: $color-white;
+    background-color: $color-primary-semi-transparent;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -50px;
+        display: block;
+        width: 0;
+        height: 0;
+        content: '';
+        border-style: solid;
+        border-width: 0 0 123px 50px;
+        border-color: transparent transparent $color-primary-semi-transparent transparent;
+    }
+
+    .zi-stetoscope {
+        fill: $color-primary;
+        width: 7rem;
+    }
+
+    .media-title {
+        color: $color-white;
+        font-size: 1.6em;
+    }
+
+    .media-body {
+        color: $color-white;
+
+        em {
+            color: $color-white;
+        }
+    }
+}
+
+
+/*
+ * =Site footer
+ */
+
+.site-footer {
+    padding: 2em 0;
+    color: $color-white;
+    background-color: #2C3E50;
+
+    a {
+        &:not(.uk-icon-button) {
+            color: #efefef;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+
+/*
+ * Page header
+ */
+
+.page-title {
+    font-size: 1.8em;
+}
+
+.sales-pitch {
+    .media {
+        .media-object {
+            width: 3rem;
+        }
+
+        .media-title {
+            color: $color-white;
+        }
+    }
+}
+
+.members-pitch {
+    > .uk-panel-title {
+        color: $color-primary;
+    }
+
+    .media {
+        .media-title {
+            color: $color-primary;
+            margin-bottom: 0;
+
+            + p {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.page-section__title {
+    font-family: Helvetica;
+}
